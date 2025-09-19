@@ -142,14 +142,17 @@ class _EventCard extends StatelessWidget {
                 borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(16),
                     bottomLeft: Radius.circular(16)),
-                child: AspectRatio(
-                  aspectRatio: 1,
-                  child: Image.network(event.thumbnailUrl,
-                      fit: BoxFit.cover,
-                      errorBuilder: (_, __, ___) => Container(
-                            color: Colors.grey.shade200,
-                            child: const Icon(Icons.image, size: 36),
-                          )),
+                child: SizedBox(
+                  width: 110,
+                  height: 110,
+                  child: Image.network(
+                    event.thumbnailUrl,
+                    fit: BoxFit.cover,
+                    errorBuilder: (_, __, ___) => Container(
+                      color: Colors.grey.shade200,
+                      child: const Icon(Icons.image, size: 36),
+                    ),
+                  ),
                 ),
               ),
               Expanded(

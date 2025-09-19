@@ -1,11 +1,11 @@
-import "package:flutter/material.dart";
-import "package:flutter_bloc/flutter_bloc.dart";
-import "../../../events/presentation/bloc/booking_bloc/booking_bloc.dart";
-import "../../../events/presentation/bloc/event_detail_bloc/event_detail_bloc.dart";
-import "../../../events/presentation/bloc/event_list_bloc/event_list_bloc.dart";
-import "../../../events/presentation/pages/event_list_page.dart";
-import "../../../events/presentation/pages/my_booking_page.dart";
-import "../../../../main.dart";
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:event_listing_app/features/events/presentation/bloc/booking_bloc/booking_bloc.dart';
+import 'package:event_listing_app/features/events/presentation/bloc/event_detail_bloc/event_detail_bloc.dart';
+import 'package:event_listing_app/features/events/presentation/bloc/event_list_bloc/event_list_bloc.dart';
+import 'package:event_listing_app/features/events/presentation/pages/event_list_page.dart';
+import 'package:event_listing_app/features/events/presentation/pages/my_booking_page.dart';
+import 'package:event_listing_app/main.dart';
 
 class MainNavigationPage extends StatefulWidget {
   const MainNavigationPage({super.key});

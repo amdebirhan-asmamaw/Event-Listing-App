@@ -12,7 +12,11 @@ class ApiClient {
   Future<Map<String, dynamic>> get(String path,
       {Map<String, String>? query}) async {
     try {
-      final uri = Uri.parse('$baseUrl$path');
+      // If path starts with 'http', use it as full URL; otherwise join with baseUrl
+      final Uri uri = path.startsWith('http')
+          ? Uri.parse(path).replace(queryParameters: query)
+          : Uri.parse('$baseUrl/$path').replace(queryParameters: query);
+
       final response = await _client.get(uri);
 
       if (response.statusCode == 200) {

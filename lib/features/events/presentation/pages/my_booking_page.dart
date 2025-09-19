@@ -31,8 +31,9 @@ class _MyBookingsPageState extends State<MyBookingsPage> {
           }
           if (state is BookingLoaded) {
             final items = state.events;
-            if (items.isEmpty)
+            if (items.isEmpty) {
               return const Center(child: Text('No bookings yet.'));
+            }
             return ListView.separated(
               itemCount: items.length,
               separatorBuilder: (_, __) => const Divider(height: 0),
